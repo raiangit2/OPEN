@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Gay</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #ff69b4;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            animation: rainbow 3s infinite;
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            20% { color: orange; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: violet; }
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            background: #fff;
+            color: #ff69b4;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>You Are Gay! 🏳️‍🌈</h1>
+        <button onclick="funMessage()">Accept Your Fabulousness</button>
+        <button onclick="denialMessage()">Deny (But Still Fabulous)</button>
+    </div>
+
+    <script>
+        function funMessage() {
+            alert("Welcome to the fabulous club! 🌈✨");
+        }
+
+        function denialMessage() {
+            alert("Denial is just the first step. 🌈");
+        }
+    </script>
+</body>
+</html>
