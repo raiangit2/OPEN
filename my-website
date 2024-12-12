@@ -45,6 +45,54 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Dropdown Menu Style */
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+        }
+        nav {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-links.hidden {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .menu-icon {
+                display: block;
+                margin: 0 auto;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+            }
+            .nav-links.hidden {
+                display: flex;
+            }
+            nav a {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -54,10 +102,13 @@
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="nav-links hidden">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <main>
@@ -91,5 +142,13 @@
     <footer>
         <p>&copy; 2024 Rumon Computer. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
+
